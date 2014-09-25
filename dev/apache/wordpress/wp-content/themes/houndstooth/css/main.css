@@ -1,0 +1,373 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import 'flexvideo.css';
+
+
+
+/* chromeframe error */
+.chromeframe {
+	background: #a00;
+	color: #faa;
+	display: block;
+	padding: 3px 0;
+	text-align: center;
+}
+.chromeframe a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+
+.page-header-top-right {
+	margin-top: 10px;
+}
+
+
+
+.pagination {
+	margin: 0;
+}
+
+
+
+.pagination-center {
+	text-align: center;
+}
+.pagination-row {
+	margin-bottom: 20px;
+}
+
+
+
+.required {
+	color: #f00;
+}
+
+
+
+.row-with-vspace {
+	margin-bottom: 20px;
+}
+
+
+
+.site-main .format-aside {
+	background: #f5f5f5;
+}
+.site-main .format-image {
+	background: url('../img/content-post-format-image.png') left top no-repeat;
+}
+.site-main .format-link {
+	background: url('../img/content-post-format-link.png') left top no-repeat;
+}
+.site-main .format-quote {
+	background: url('../img/content-post-format-quote.png') left top no-repeat;
+}
+.site-main .format-video {
+	background: url('../img/content-post-format-video.png') left top no-repeat;
+}
+
+
+/*
+.site-title {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+.site-title > a {
+	text-decoration: none;
+}
+.site-title > div {
+	height: auto;
+	line-height: 18px;
+}
+.site-title .site-description {
+	color: #999;
+	font-size: 16px;
+}
+.site-title .site-title-heading {
+	margin: 0;
+}
+*/
+
+.widget_calendar #wp-calendar {
+	margin: 0;
+}
+.widget_calendar #wp-calendar #next {
+	text-align: right;
+}
+
+
+
+#comments .comment-navigation {
+	margin-bottom: 0;
+}
+#comments .comment-navigation-below {
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
+#comments .media-list li .media {
+	margin-top: 15px;
+}
+#comments .media-list li .media .media-body {
+	border: 1px solid #eee;
+	padding: 10px;
+}
+#comments .media-list li .media .media-body .comment-author {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+#comments .media-list ul.children {
+	list-style: none;
+	margin-left: 2.5em;
+}
+
+
+#main-column img,
+#main-column .wp-video-shortcode {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+#main-column .attachment .entry-content {
+	margin-bottom: 20px;
+}
+#main-column .attachment .entry-content .attachment {
+	text-align: center;
+}
+#main-column .attachment .entry-meta {
+	margin-bottom: 20px;
+}
+#main-column .post,
+#main-column .page {
+	border: 1px solid #eee;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+#main-column .post .entry-header .entry-meta {
+	color: #999;
+}
+#main-column .post .entry-header .entry-meta a {
+	color: inherit;
+}
+#main-column .post .entry-header .entry-meta .posted-on .updated {
+	display: none;
+}
+#main-column .post .entry-meta .categories-icon {
+	cursor: default;
+}
+#main-column .post .entry-meta .comments-link a {
+	color: #333;
+}
+#main-column .post .entry-meta .comments-link a .comment-icon .comment-total,
+#main-column .page .entry-meta .comments-link a .comment-icon .comment-total {
+	color: #555;
+	font-size: 12px;
+	margin-left: 5px;
+}
+#main-column .attachment .edit-post-link a, 
+#main-column .attachment .entry-meta .edit-post-link a, 
+#main-column .post .entry-meta .edit-post-link a,
+#main-column .page .entry-meta .edit-post-link a {
+	color: #333;
+}
+#main-column .post .entry-meta .tags-icon {
+	cursor: default;
+}
+#main-column .attachment .entry-title, 
+#main-column .post .entry-title,
+#main-column .page .entry-title {
+	margin-top: 0;
+	word-wrap: break-word;
+}
+
+
+
+#sidebar-left .widget,
+#sidebar-right .widget {
+	border: 1px solid #eee;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 10px;
+}
+#sidebar-left .widget ul,
+#sidebar-right .widget ul {
+	padding-left: 20px;
+}
+#sidebar-left .widget .widget-title,
+#sidebar-right .widget .widget-title {
+	font-size: 18px;
+	margin-top: 0;
+}
+
+
+#site-footer {
+	/* border-top: 1px solid black; */
+	font-size: 12px;
+	padding: 10px;
+}
+
+
+/* Houndstooth Extra */
+
+
+body * {
+  font-family: Arial, sans-serif;
+}
+
+a,
+a:hover,
+a:focus {
+  color: black;
+  text-decoration: underline;
+}
+
+h1 a,
+h1 a:hover,
+h1 a:focus,
+h2 a,
+h2 a:hover,
+h2 a:focus,
+h3 a,
+h3 a:hover,
+h3 a:focus {
+  text-decoration:none;
+  font-family: 'League Gothic', sans-serif; 
+}
+
+h1 {
+  font-family: 'League Gothic', sans-serif; 
+  font-size: 32pt;
+  padding: 0;
+  margin-top:30px;
+/*  background-image: url( ../img/ht_logo.png ); 
+  background-position: left 40%;
+  background-repeat: no-repeat;
+*/
+  padding-left: 15px;
+}
+
+h2 {
+  font-family: 'League Gothic', sans-serif;
+  padding-left: 7px;
+  margin-top: 30px;
+  margin-left: 0;
+  border-left: 3px solid black;
+}
+
+h3 {
+  font-family: 'League Gothic', sans-serif;
+}
+
+.centre {
+  text-align: center;
+}
+
+
+.separator {
+  width: 1100px;
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+img.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+.title-container {
+  float:left;
+}
+
+.nav-container {
+  float:right;
+}
+
+.htcell {
+  height: 250px; 
+  width: 300px; 
+/*  border: 1px dotted #333; */
+}
+
+.htimgcell_large {
+  height: 420px;
+  width: 630px;
+  border: 1px solid black;
+}
+
+.htimgcell_large img {
+  max-height: 420px;
+}
+
+.htimgcell {
+  border: 1px solid black;
+  width: 300px;
+  height: 200px;
+}
+
+.htimgcell img {
+  max-height: 198px;
+}
+
+.site-content-wrapper {
+  padding-top: 60px;
+  overflow:hidden;
+/*  max-height: 600px; */
+}
+
+.site-content {
+  margin-top:44px;
+}
+
+.solid-navbar {
+  background: white;
+}
+
+/* Override .. */
+.nav > li > a,
+.nav > li > a:hover, 
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: white;
+  font-family: 'League Gothic', sans-serif;  
+  font-size: 17pt;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.nav > li > a {
+  border-left: 2px solid black;
+}
+
+.nav > li:first-child > a {
+  border-left: 0;
+}
+
+.htnavbar {
+  margin-bottom: 0;
+  min-height: 0;
+  height: 20px;
+  margin-top:44px;
+  padding-left:20px;
+}
+
+.news_title {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 18pt;
+  
+  -o-text-overflow: ellipsis;   /* Opera */
+  text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
+  overflow:hidden;              /* don't show excess chars */
+  white-space:nowrap;           /* force single line */
+  width: 300px;                 /* fixed width */
+}
+
+.search-form > input {
+  border: 1px solid black;
+  padding: 4px;
+  width: 300px;
+}
