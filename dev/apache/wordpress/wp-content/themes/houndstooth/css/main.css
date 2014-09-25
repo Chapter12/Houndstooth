@@ -139,11 +139,12 @@
 #main-column .attachment .entry-meta {
 	margin-bottom: 20px;
 }
+/* These effect main content pages */
 #main-column .post,
 #main-column .page {
-	border: 1px solid #eee;
+  margin-top: 30px;
 	margin-bottom: 20px;
-	padding: 10px;
+  min-height: 600px;
 }
 #main-column .post .entry-header .entry-meta {
 	color: #999;
