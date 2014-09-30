@@ -16,16 +16,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'testtheh1_wp');
+define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
-define('DB_USER', 'testtheh1_wp');
+define('DB_USER', 'wp');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'dG4GPP8w');
+define('DB_PASSWORD', 'wp');
 
 /** MySQL hostname */
-define('DB_HOST', '10.168.1.47');
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -42,16 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-
-define('AUTH_KEY',         '?!!``eB~SfmUG#$%CAc||ReOHp}@t*b>NOfsUblzGs0WS|-Iw *cq~l^|#% )T2*');
-define('SECURE_AUTH_KEY',  ':r67;dG-aXYr[=r|Dr/n|o*Zo^cKPi05HJ>qsUYN.FvU^YO[U)>qu`Fl-0+E4y-E');
-define('LOGGED_IN_KEY',    '/]G3EIe_Rx.{||jK)<X&Dp*3[+laog,Vs>Z1vZ9by$n6gkYV^Z8(q#p*Tvk+X[Gn');
-define('NONCE_KEY',        '!otO$EmX`+/5-(0{jwCQ[GG1rwn:758,[]9aTGFg{(6#ZH__fbu{4AP`-/`p/Z^!');
-define('AUTH_SALT',        '~]-=*xK8>-dkov~=VL eWdo(#K23H)5kgQAe_=Dfg)4s(SZc-!I6J.494n5L$g^1');
-define('SECURE_AUTH_SALT', 'b9^d%U:$sT:5fo`_)k+Xm?PXr^mC>}>{Fy|[|%9/}^XaTM{>ls|$`sAB;]E?Av0X');
-define('LOGGED_IN_SALT',   '0k[q[y Y-d-hh!5zbO@{?H-v12 k:OZ|y,Wz=@-Tp?j8dRJ3kMDSh$BAGV8?d%bB');
-define('NONCE_SALT',       'fCtLH&1Pv42;1=P@fu}G.OX`20K*5-]*{1dQuB{ue6&TJi)kb]g08daau0LFC1m*');
-
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 
@@ -80,7 +78,8 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
 
 /* That's all, stop editing! Happy blogging. */
 

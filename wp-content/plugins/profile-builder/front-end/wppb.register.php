@@ -6,13 +6,12 @@
 function signup_password_random_password_filter( $password ) {
 	global $wpdb;
 
-	$key = ( !empty( $_GET['key'] ) ? $_GET['key'] : null );
-	$key = ( !empty( $_POST['key'] ) ? $_POST['key'] : null );
+	$key = ( !empty( $_GET['key'] ) ? $_GET['key'] : $_POST['key'] );
 
-	if ( !empty( $_POST['user_pass'] ) )
+	if ( !empty($_POST['user_pass']) )
 		$password = $_POST['user_pass'];
 		
-	elseif ( !is_null( $key ) ) {
+	elseif ( !empty( $key ) ) {
 		$signup = ( is_multisite() ? $wpdb->get_row( $wpdb->prepare( "SELECT * FROM " . $wpdb->signups . " WHERE activation_key = %s", $key ) ) : $wpdb->get_row( $wpdb->prepare( "SELECT * FROM " . $wpdb->prefix . "signups WHERE activation_key = %s", $key ) ) );
 		
 		if ( empty( $signup ) || $signup->active ) {
@@ -22,23 +21,29 @@ function signup_password_random_password_filter( $password ) {
 			$meta = unserialize( $signup->meta );
 			
 			$password = $meta['user_pass'];
-		}
+		}		
+	}
+	return $password;
+}
+add_filter('random_password', 'signup_password_random_password_filter');
+
+function wppb_generate_random_username($sentEmail){
+	$email = '';
+	
+	for($i=0; $i<strlen($sentEmail); $i++){
+		if (($sentEmail[$i] === '@') || ($sentEmail[$i] === '_') || ($sentEmail[$i] === '-') || ($sentEmail[$i] === '.'))
+			break;
+		else
+			$email .= $sentEmail[$i];
 	}
 	
-	return apply_filters( 'wppb_generated_random_password', $password, $key );
-}
-add_filter( 'random_password', 'signup_password_random_password_filter' );
+    $username = 'pbUser'.$email.mktime(date("H"), date("i"), date("s"), date("n"), date("j"), date("Y"));
 
-function wppb_generate_random_username( $user_email ){
-	$user_email = str_replace( array( '@', '-', '_', '.' ), '', $user_email );
-	
-    $username = strtolower( 'pbuser'.$email.mktime( date("H"), date("i"), date("s"), date("n"), date("j"), date("Y") ) );
-
-	while ( username_exists( $username ) ){
-		 $username = strtolower( 'pbuser'.$email.mktime( date("H"), date("i"), date("s"), date("n"), date("j"), date("Y") ) );
+	while (username_exists($username)){
+		 $username = 'pbUser'.$email.mktime(date("H"), date("i"), date("s"), date("n"), date("j"), date("Y"));
     }
 	
-    return apply_filters( 'wppb_generated_random_username', $username, $user_email );
+    return $username;
 }
 
 function wppb_add_custom_field_values($POST, $meta){
@@ -427,7 +432,7 @@ function wppb_front_end_register($atts){
 			foreach ( $wppbFetchArray as $key => $value){
 				switch ($value['item_type']) {
 					case "input":{
-						$_POST[$value['item_type'].$value['id']] = apply_filters( 'wppb_register_input_custom_field_'.$value['id'].'_check', $_POST[$value['item_type'].$value['id']]);
+						$_POST[$value['item_type'].$value['id']] = apply_filters('wppb_register_input_custom_field_'.$value['id'], $_POST[$value['item_type'].$value['id']]);
 						if (isset($value['item_required'])){
 							if ($value['item_required'] == 'yes'){
 								if (trim($_POST[$value['item_type'].$value['id']]) == '')
@@ -804,7 +809,6 @@ function wppb_front_end_register($atts){
 					$bloginfo = get_bloginfo( 'name' );
 					$sentEmailStatus = wppb_notify_user_registration_email($bloginfo, esc_attr($_POST['user_name']), esc_attr($_POST['email']), $_POST['send_credentials_via_email'], $_POST['passw1'], $wppb_generalSettings['adminApproval']);
 					
-					do_action('wppb_user_register', $new_user);
 				}
 			}elseif ( is_multisite() ){
 			

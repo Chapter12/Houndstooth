@@ -31,7 +31,7 @@ class WPUF_Attachment {
 
         wp_enqueue_script( 'jquery' );
 
-        if ( wpuf_has_shortcode( 'wpuf_addpost' ) || wpuf_has_shortcode( 'wpuf_edit' ) ) {
+        if ( wpuf_has_shortcode( 'wpuf_addpost' ) || wpuf_has_shortcode( 'wpuf_edit' ) || wpuf_has_shortcode( 'ht-wpuf-addpost' )) {
             wp_enqueue_script( 'plupload-handlers' );
         }
 
