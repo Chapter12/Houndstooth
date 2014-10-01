@@ -60,7 +60,7 @@ function ht_user_submitted_posts() {
 
 add_shortcode('ht-wpuf-addpost', 'ht_wpuf_addpost');
 function ht_wpuf_addpost() {
-  error_log("Domain: " . $_SERVER['HTTP_HOST']);
+  error_log("Domain n: " . $_SERVER['HTTP_HOST']);
   if (is_user_logged_in()) {
     echo do_shortcode('[wpuf_addpost]');
   } else {
@@ -78,6 +78,12 @@ function ht_wpuf_addpost() {
 
   }
 } 
+
+function ht_wpuf_after_post_redirect($permaluke, $post_id) {
+   error_log("I was called.");
+  return "http://www.bbc.co.uk";
+}
+add_filter( 'wpuf_after_post_redirect', 'ht_wpuf_after_post_redirect', 10, 2);
 
 /* End WPUF modifications */
 
@@ -114,6 +120,7 @@ function custom_load_textdomain_mofile( $mofile, $domain){
 // Now this is not being called for USP uploads! Ach!
 
 // 2014-07-22 - with a bit of luck we won't actually need this at all - depends on how much manual work can be done by the client rather than automatically (obviously the latter is preferable, but carries its own risks in terms of bugs, maintenance, upgrades, etc.)
+// 2014-10-01 - This doesn't duplicate db record though..
 $well = remove_action('wp_handle_upload', 'jr_uploadresize_resize');
 //error_log("Removed action ok? " . $well);
 add_action('wp_handle_upload', 'ht_uploadresize_resize');
