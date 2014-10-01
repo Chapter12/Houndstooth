@@ -77,6 +77,8 @@ function wppb_front_end_login( $atts ){
 			if ($_POST['formName'] == 'login'){
 				if ($_POST['button'] == 'page'){
 					$permaLnk2 = wppb_curpageurl();
+
+          $permaLnk2 = apply_filters('wppb_after_login_redirect', $permaLnk2);
 				
 					$wppb_addon_settings = get_option('wppb_addon_settings'); //fetch the descriptions array
 					if ($wppb_addon_settings['wppb_customRedirect'] == 'show'){

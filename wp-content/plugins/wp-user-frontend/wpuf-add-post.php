@@ -480,7 +480,6 @@ class WPUF_Add_Post {
             //echo '<div class="success">' . __('Post published successfully', 'wpuf') . '</div>';
             if ( $post_id ) {
                 $redirect = apply_filters( 'wpuf_after_post_redirect', get_permalink( $post_id ), $post_id );
-                error_log("Redirect: " . $redirect);
                 wp_redirect( $redirect );
                 exit;
             }

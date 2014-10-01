@@ -27,6 +27,36 @@ function ht_wppb_register_redirect_after_creation($message, $link) {
   return ""; // Actually don't need to say anything else here; just need to stop it redirecting..
 }
 
+// This is a custom hook added into the plugin itself! front-end/wppb.register.php:81
+function ht_wppb_after_login_redirect($old_link) {
+  $link = get_permalink(SUBMIT_PAGE_ID);
+  return $link;
+}
+
+// Override subheading in registration form
+function ht_wppb_register_content_name1($old_name) {
+  return "";
+}
+
+// Override subheading in registration form
+function ht_wppb_register_content_info1($old_name) {
+  return "";
+}
+
+// Override subheading in registration form
+function ht_wppb_register_content_about_yourself1($old_name) {
+  return "";
+}
+
+function ht_wppb_pre_login_url_filter($old_link) {
+  return get_permalink(LOST_PASSWORD_PAGE_ID);
+}
+
+add_filter( 'wppb_pre_login_url_filter', 'ht_wppb_pre_login_url_filter', 10, 1);
+add_filter( 'wppb_register_content_about_yourself1', 'ht_wppb_register_content_about_yourself1', 10, 1);
+add_filter( 'wppb_register_content_info1', 'ht_wppb_register_content_info1', 10, 1);
+add_filter( 'wppb_register_content_name1', 'ht_wppb_register_content_name1', 10, 1);
+add_filter( 'wppb_after_login_redirect', 'ht_wppb_after_login_redirect', 10, 1);
 add_filter( 'wppb_signup_user_notification_email_content', 'ht_wppb_signup_user_notification_email_content' );
 add_filter( 'wppb_signup_user_notification_email_subject', 'ht_wppb_signup_user_notification_email_subject' );
 add_filter( 'wppb_signup_user_notification_email_from_field', 'ht_wppb_signup_user_notification_email_from_field' );
@@ -79,9 +109,13 @@ function ht_wpuf_addpost() {
   }
 } 
 
+/* Need to do the redirect here rather than just passing it back, which doesn't sem to work - not sure how this works, but may be something to do with headers already being sent?
+*/
 function ht_wpuf_after_post_redirect($permaluke, $post_id) {
-   error_log("I was called.");
-  return "http://www.bbc.co.uk";
+  $link = get_permalink(SUBMISSION_COMPLETE_PAGE_ID);
+  error_log( $link );
+  wp_redirect( $link );
+  exit;
 }
 add_filter( 'wpuf_after_post_redirect', 'ht_wpuf_after_post_redirect', 10, 2);
 
