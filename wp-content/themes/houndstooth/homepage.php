@@ -21,7 +21,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
     <div class='row'>
       <div class='col-md-8'>
         <div class='htimgcell_large'>
-          <img src="<?php echo get_bloginfo('template_url') ?>/img/placeholder7.jpg" height="420" width="630" />
+          <a href='<?php echo get_permalink(HOUNDSTOOTH_PAGE_ID); ?>'><?php echo get_the_post_thumbnail(HOUNDSTOOTH_PAGE_ID, array(630,420)); ?></a>
         </div>
       </div>
       <div class='col-md-4'>
@@ -37,7 +37,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
     <div class='row'>
       <div class='col-md-8'>
         <div class='htimgcell_large'>
-          <img src="<?php echo get_bloginfo('template_url') ?>/img/placeholder8.jpg" height="420" width="630"  />
+          <a href='<?php echo get_permalink(RESEARCH_STUDIO_PAGE_ID); ?>'><?php echo get_the_post_thumbnail(RESEARCH_STUDIO_PAGE_ID, array(630,420)); ?></a>
         </div>
       </div>
       <div class='col-md-4'>
