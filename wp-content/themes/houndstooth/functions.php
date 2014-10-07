@@ -30,6 +30,17 @@ define('LOST_PASSWORD_PAGE_ID', 345);
 define('NEWS_CATEGORY_ID',16);
 define('SUBMISSIONS_CATEGORY_ID',17);
 
+// Override for live site:
+$site_url = get_site_url();
+if ( false == strstr( $site_url, 'localhost' ) ) {
+
+define('SUBMISSION_COMPLETE_PAGE_ID', 328);
+define('LOST_PASSWORD_PAGE_ID', 319);
+
+
+} 
+
+
 // Requires plugin: http://wordpress.org/support/view/plugin-reviews/page-excerpt
 function page_teaser($page_id) {
   $houndstooth_page = get_post($page_id);
@@ -43,6 +54,7 @@ function page_teaser($page_id) {
 }
 
 function image_with_rollover( $image_id ) {
+  global $pigale;
   $image_array = wp_get_attachment_image_src( $image_id, array(300,200) );
   $src = $image_array[0];
   if ($src) {
@@ -51,7 +63,7 @@ function image_with_rollover( $image_id ) {
   } else {
     $html = "";
   }
-  return $html;
+  return $html . "<!-- " . $pigale . " -->";
 }
 
 /**
