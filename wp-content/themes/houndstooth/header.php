@@ -78,3 +78,11 @@
 	
 		<div class="container page-container site-content-wrapper">	
 			<div id="content" class="row row-with-vspace site-content">
+
+        <div class="breadcrumbs">
+            <?php if(function_exists('bcn_display'))
+            {
+                bcn_display();
+            }?>
+        </div>
+        

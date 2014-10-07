@@ -405,3 +405,8 @@ img.aligncenter {
 .tagcloud a:nth-child(9n+7){background-color: #B37333;}
 .tagcloud a:nth-child(9n+8){background-color: #FF6600;}
 */
+
+
+.breadcrumbs {
+  padding-left: 15px;
+}
