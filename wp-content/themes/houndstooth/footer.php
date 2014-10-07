@@ -15,12 +15,12 @@
 			<footer id="site-footer" role="contentinfo">
 				<div id="footer-row" class="row site-footer">
 					<div class="col-md-4">
-            <a href="mailto:info@houndstoothproject.org">Email: info@houndstoothproject.org</a><br />
-            <a href="http://twitter.com"><img src="<?php echo get_bloginfo('template_url') ?>/img/twitter-24.png" />The Houndstooth Project on Twitter</a>
+            <a href="http://twitter.com">The Houndstooth Project on Twitter</a>
           </div>
 
           <div class="col-md-4">
-            Copyright &#169; The Houndstooth Project <?php echo date('Y'); ?>
+            <p><a href="#">Copyright information for users</a></p>
+            <p>Copyright &#169; The Houndstooth Project <?php echo date('Y'); ?></p>
           </div>
 
           <div class="col-md-4">
