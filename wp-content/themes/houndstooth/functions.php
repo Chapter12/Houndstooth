@@ -42,6 +42,17 @@ function page_teaser($page_id) {
   . "'>About</a>";
 }
 
+function image_with_rollover( $image_id ) {
+  $image_array = wp_get_attachment_image_src( $image_id, array(300,200) );
+  $src = $image_array[0];
+  if ($src) {
+    $html = "<img src='" . $src . "'"
+    . " onmouseover='image_mouseover(this)' onmouseout='image_mouseout(this,\"" . $src . "\")' />";
+  } else {
+    $html = "";
+  }
+  return $html;
+}
 
 /**
  * Setup theme and register support wp features.

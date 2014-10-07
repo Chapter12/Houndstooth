@@ -66,7 +66,13 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
               <div class='htcell'>
                 <div class='news_title'><?php the_title(); ?></div>
                 <div class='htimgcell'>
-                  <a href='<?php the_permalink(); ?>'><?php echo get_the_post_thumbnail(null,array(300,200)); ?></a>
+                  <a href='<?php the_permalink(); ?>'>
+                    <?php
+                      //echo get_the_post_thumbnail(null,array(300,200)); 
+                      $image_id = get_post_thumbnail_id( );
+                      echo image_with_rollover( $image_id ); 
+                    ?>
+                  </a>
                 </div>
               </div>
             </div>
