@@ -226,17 +226,28 @@ a:focus {
   text-decoration: underline;
 }
 
+p a,
+p a:hover,
+p a:focus {
+  color: gray;
+}
+
 h1 a,
-h1 a:hover,
 h1 a:focus,
 h2 a,
-h2 a:hover,
 h2 a:focus,
 h3 a,
-h3 a:hover,
 h3 a:focus {
   text-decoration:none;
+  color: black;
   font-family: 'League Gothic', sans-serif; 
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover {
+  color: black;
+  text-decoration: underline;
 }
 
 h1 {
@@ -330,9 +341,8 @@ img.aligncenter {
 
 /* Override .. */
 .nav > li > a,
-.nav > li > a:hover, 
+.nav > li > a:hover,
 .nav > li > a:focus {
-  text-decoration: none;
   background-color: white;
   font-family: 'League Gothic', sans-serif;  
   font-size: 17pt;
@@ -340,6 +350,15 @@ img.aligncenter {
   padding-left: 7px;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+
+.nav > li > a,
+.nav > li > a:focus {
+  text-decoration: none;
+}
+
+.nav > li > a:hover {
+  text-decoration: underline;
 }
 
 .nav > li > a {
