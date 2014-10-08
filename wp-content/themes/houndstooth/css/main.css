@@ -388,6 +388,18 @@ img.aligncenter {
   width: 300px;                 /* fixed width */
 }
 
+.news_title a,
+.news_title a:focus {
+  font-family: 'League Gothic', sans-serif;
+  text-decoration: none;
+}
+
+.news_title a:hover {
+  font-family: 'League Gothic', sans-serif;
+  text-decoration: underline;
+}
+
+
 .search-box input {
   border: 1px solid black;
   padding: 4px;

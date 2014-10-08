@@ -95,7 +95,9 @@ function ht_thumbs_func( $atts ) {
             ?> 
               <div class='col-md-4'>
                 <div class='htcell'>
-                  <div class='news_title'><?php echo get_the_title(); ?></div>
+                  <div class='news_title'>
+                    <a href='<?php the_permalink(); ?>'><?php echo get_the_title(); ?></a>
+                  </div>
                   <div class='htimgcell'>
                     <a href='<?php the_permalink(); ?>'>
                       <?php
