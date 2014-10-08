@@ -11,13 +11,16 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
   <main id="main" class="site-main" role="main">
     <div class='row'>
       <div class="col-md-4">
+  <!--
         <div class="tagcloud">
           <?php wp_tag_cloud( 'smallest=8&largest=22' ); ?>
         </div>
+-->
       </div>
       <div class="col-md-4">
       </div>
     </div>
+    
     <div class='row'>
 						<?php if (have_posts()) { 
             $count = 0;
