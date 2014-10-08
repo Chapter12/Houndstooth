@@ -73,6 +73,58 @@ function image_with_rollover( $image_id, $size='small' ) {
   return $html;
 }
 
+// [ht_thumbs cat='']
+function ht_thumbs_func( $atts ) {
+  $a = shortcode_atts( array(
+    'cat_id' => SUBMISSIONS_CATEGORY_ID,
+  ), $atts );
+
+  ob_start();
+    ?>
+    <htthumbs>
+      <div class='row'>
+      <?php
+        $show_all_link = get_category_link($a['cat_id']);
+	      $my_query = new WP_Query( array('cat' => $a['cat_id'], 'posts_per_page' => 3) );
+
+        if ($my_query->have_posts()) { 
+          $count = 0;
+          while ($my_query->have_posts()) {
+            $count+=1;
+            $my_query->the_post();
+            ?> 
+              <div class='col-md-4'>
+                <div class='htcell'>
+                  <div class='news_title'><?php echo get_the_title(); ?></div>
+                  <div class='htimgcell'>
+                    <a href='<?php the_permalink(); ?>'>
+                      <?php
+                        $image_id = get_post_thumbnail_id( );
+                        echo image_with_rollover( $image_id ); 
+                      ?>
+                    </a>
+                  </div>
+                </div>
+              </div>
+    <?php
+        } // end while
+      } else {
+        get_template_part('no-results', 'index');
+      } // end if
+      wp_reset_postdata();
+    ?>
+    </div>
+    <div class='row'>
+      <div class='col-md-12 text-right'><a href='<?php echo $show_all_link ?>'>View all</a></div>
+    </div> <!-- row -->
+  </htthumbs>
+  <?php
+
+  return ob_get_clean();
+}
+add_shortcode( 'ht_thumbs', 'ht_thumbs_func' );
+
+
 /**
  * Setup theme and register support wp features.
  */
