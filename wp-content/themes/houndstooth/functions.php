@@ -53,17 +53,24 @@ function page_teaser($page_id) {
   . "'>About</a>";
 }
 
-function image_with_rollover( $image_id ) {
-  global $pigale;
-  $image_array = wp_get_attachment_image_src( $image_id, array(300,200) );
+function image_with_rollover( $image_id, $size='small' ) {
+  if ($size == 'small') {
+    $dimensions = array(300,200);
+    $js_function_suffix = "";
+  } else {
+    $dimensions = array(630,420);
+    $js_function_suffix = "_large";
+  }
+
+  $image_array = wp_get_attachment_image_src( $image_id, $size );
   $src = $image_array[0];
   if ($src) {
     $html = "<img src='" . $src . "'"
-    . " onmouseover='image_mouseover(this)' onmouseout='image_mouseout(this,\"" . $src . "\")' />";
+    . " onmouseover='image_mouseover" . $js_function_suffix . "(this)' onmouseout='image_mouseout(this,\"" . $src . "\")' />";
   } else {
     $html = "";
   }
-  return $html . "<!-- " . $pigale . " -->";
+  return $html;
 }
 
 /**
