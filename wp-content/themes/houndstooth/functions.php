@@ -44,6 +44,7 @@ define('UPLOAD_PAGE_ID', 356);
 
 // Requires plugin: http://wordpress.org/support/view/plugin-reviews/page-excerpt
 function page_teaser($page_id) {
+  global $site_url;
   $houndstooth_page = get_post($page_id);
   $houndstooth_page_link = get_page_link($page_id);
   return "<p>" 
@@ -51,7 +52,7 @@ function page_teaser($page_id) {
   . "</p>"
   . "<p><a href='"
   . $houndstooth_page_link
-  . "'>About</a>";
+  . "'>About</a> <!-- " . $site_url . " -->";
 }
 
 function image_with_rollover( $image_id, $size='small' ) {
