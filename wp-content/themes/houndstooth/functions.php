@@ -21,7 +21,7 @@ define('COLLECTIONS_PAGE',"/wordpress/collections");
 define('HOUNDSTOOTH_PAGE_ID', 203);
 define('RESEARCH_STUDIO_PAGE_ID', 178);
 define('SUBMISSIONS_PAGE_ID', 225);
-define('SUBMIT_PAGE_ID', 132);
+define('UPLOAD_PAGE_ID', 132);
 define('PROFILES_PAGE_ID', 307);
 define('PROJECTS_PAGE_ID', 309);
 define('SUBMISSION_COMPLETE_PAGE_ID', 336);
@@ -36,6 +36,7 @@ if ( false == strstr( $site_url, 'localhost' ) ) {
 
 define('SUBMISSION_COMPLETE_PAGE_ID', 328);
 define('LOST_PASSWORD_PAGE_ID', 319);
+define('UPLOAD_PAGE_ID', 356);
 
 
 } 

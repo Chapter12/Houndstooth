@@ -35,9 +35,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                     <div class='htimgcell'>
                       <a href='<?php the_permalink(); ?>'><?php echo get_the_post_thumbnail(null,array(300,200)); ?></a>
                     </div>
-                    <div class="text-right entry-meta">
-                      <?php bootstrapBasicPostOn(); ?> 
-                    </div>
+                    <div class='text-right'><a href='<?php the_permalink(); ?>'><?php the_author(); ?></div>
                   </div>
                 </div>
           
