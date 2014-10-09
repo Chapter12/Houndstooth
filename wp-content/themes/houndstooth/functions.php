@@ -30,7 +30,9 @@ define('LOST_PASSWORD_PAGE_ID', 345);
 define('NEWS_CATEGORY_ID',16);
 define('SUBMISSIONS_CATEGORY_ID',17);
 
-// Override for live site:
+define('UPLOAD_PAGE_ID', 9999);
+
+// Override for live site - this doesn't work.
 $site_url = get_site_url();
 if ( false == strstr( $site_url, 'localhost' ) ) {
 
@@ -40,11 +42,12 @@ define('UPLOAD_PAGE_ID', 356);
 
 
 } 
+ 
+
 
 
 // Requires plugin: http://wordpress.org/support/view/plugin-reviews/page-excerpt
 function page_teaser($page_id) {
-  global $site_url;
   $houndstooth_page = get_post($page_id);
   $houndstooth_page_link = get_page_link($page_id);
   return "<p>" 
@@ -52,7 +55,7 @@ function page_teaser($page_id) {
   . "</p>"
   . "<p><a href='"
   . $houndstooth_page_link
-  . "'>About</a> <!-- " . $site_url . " -->";
+  . "'>About</a>";
 }
 
 function image_with_rollover( $image_id, $size='small' ) {
