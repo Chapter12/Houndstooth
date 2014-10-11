@@ -17,7 +17,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 ?>
 <div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
   <main id="main" class="site-main" role="main">
-    <h2>Houndstooth</h2>
+    <h2><a href='<?php echo get_permalink(HOUNDSTOOTH_PAGE_ID); ?>'>Houndstooth</a></h2>
     <div class='row'>
       <div class='col-md-8'>
         <div class='htimgcell_large'>
@@ -38,7 +38,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
       </div>
     </div>
 
-    <h2>Research Studio</h2>
+    <h2><a href='<?php echo get_permalink(RESEARCH_STUDIO_PAGE_ID); ?>'>Research Studio</a></h2>
     <div class='row'>
       <div class='col-md-8'>
         <div class='htimgcell_large'>
