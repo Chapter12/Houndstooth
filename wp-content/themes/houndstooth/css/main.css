@@ -229,7 +229,11 @@ a:focus {
 p a,
 p a:hover,
 p a:focus {
+  color: black;
+}
+p a:hover {
   color: gray;
+  text-decoration: none;
 }
 
 h1 a,
