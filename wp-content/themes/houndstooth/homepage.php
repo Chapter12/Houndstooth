@@ -61,11 +61,13 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
       </div>
     </div>
 
-    <h2>News</h2>
+    <?php
+    $news_id = NEWS_CATEGORY_ID; 
+    $news_link = get_category_link($news_id);
+    ?>
+    <h2><a href="<?php echo $news_link ?>">News</a></h2>
     <div class='row'>
-      <?php
-      $news_id = NEWS_CATEGORY_ID; 
-      $news_link = get_category_link($news_id);
+      <?php 
       query_posts( array('cat' => $news_id, 'posts_per_page' => 6) );
 
       if (have_posts()) { 
@@ -104,6 +106,11 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
         get_template_part('no-results', 'index');
       } // endif; 
       ?>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-right">
+        <a href="<?php echo $news_link ?>">All news</a>
+      </div>
     </div>
 
   </main>
