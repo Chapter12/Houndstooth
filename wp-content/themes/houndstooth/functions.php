@@ -21,16 +21,12 @@ define('COLLECTIONS_PAGE',"/wordpress/collections");
 define('HOUNDSTOOTH_PAGE_ID', 203);
 define('RESEARCH_STUDIO_PAGE_ID', 178);
 define('SUBMISSIONS_PAGE_ID', 225);
-define('UPLOAD_PAGE_ID', 132);
 define('PROFILES_PAGE_ID', 307);
 define('PROJECTS_PAGE_ID', 309);
-define('SUBMISSION_COMPLETE_PAGE_ID', 336);
-define('LOST_PASSWORD_PAGE_ID', 345);
 
 define('NEWS_CATEGORY_ID',16);
 define('SUBMISSIONS_CATEGORY_ID',17);
 
-define('UPLOAD_PAGE_ID', 9999);
 
 // Override for live site - this doesn't work.
 $site_url = get_site_url();
@@ -39,9 +35,17 @@ if ( false == strstr( $site_url, 'localhost' ) ) {
 define('SUBMISSION_COMPLETE_PAGE_ID', 328);
 define('LOST_PASSWORD_PAGE_ID', 319);
 define('UPLOAD_PAGE_ID', 356);
+define('LOGIN_PAGE_ID', 154);
 
 
-} 
+} else {
+define('UPLOAD_PAGE_ID', 132);
+define('SUBMISSION_COMPLETE_PAGE_ID', 336);
+define('LOST_PASSWORD_PAGE_ID', 345);
+define('UPLOAD_PAGE_ID', 9999);
+define('LOGIN_PAGE_ID', 154);
+
+}
  
 
 
@@ -131,6 +135,15 @@ function ht_thumbs_func( $atts ) {
 }
 add_shortcode( 'ht_thumbs', 'ht_thumbs_func' );
 
+
+function login_out_link( $redirect ) {
+if ( is_user_logged_in() ) {
+  $html = "<a href='" . wp_logout_url() . "'>Logout</a>";
+} else {
+	$html = "<a href='" . get_permalink( LOGIN_PAGE_ID ) . "'>Login</a>";
+}
+return $html;
+}
 
 /**
  * Setup theme and register support wp features.
