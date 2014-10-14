@@ -26,6 +26,7 @@
     		<?php 
           $content= get_the_content(bootstrapBasicMoreLinkText()); 
           $content = apply_filters ('the_content', $content);
+          // This creates a new full-width row to allow the thumbnail design, if the [htthumbs] shorttag is used:
           $content = str_replace( '<htthumbs>', '<htthumbs></div></div>', $content);
           $content = str_replace( '</htthumbs>', '<div class="row"><div class="col-md-8"></htthumbs>', $content);
         
