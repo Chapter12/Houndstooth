@@ -1,7 +1,13 @@
 <!-- content.php -->
 
 <header class="entry-header">
-	<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+  <?php 
+    if ( is_single() ) {
+      echo '<h2 class="entry-title">' . get_the_title() . '</h2>';
+    } else {
+      echo '<h3 class="entry-title"><a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_title() . '</a></h3>';
+    }
+  ?>
 
 	</header><!-- .entry-header -->
 
