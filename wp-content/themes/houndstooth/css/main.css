@@ -343,6 +343,11 @@ img.aligncenter {
   background: white;
 }
 
+/* Override bootstrap */
+.page-header {
+  border-bottom: none;
+}
+
 /* Override .. */
 .nav > li > a,
 .nav > li > a:hover,
