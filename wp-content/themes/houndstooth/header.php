@@ -21,9 +21,7 @@
 		
 		<!--wordpress head-->
 		<?php wp_head(); ?>
-    <script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/js/jquery.fancy-scroll.js"></script>
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_url') ?>/css/colorbox.css">
-    <?php /*<script src="jquery.min.js"></script> */ ?>
 
     <script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/js/jquery.colorbox-min.js"></script>
     

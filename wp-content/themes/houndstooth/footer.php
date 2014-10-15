@@ -39,14 +39,6 @@
 		
 		<!--wordpress footer-->
 		<?php wp_footer(); ?>
-
-  <script type="text/javascript">
-  
-  //  jQuery("div.site-content-wrapper").fancy_scroll({
-  //    animation: "bounce",
-  //    innerWrapper: ".site-content"
-  //  });
-  </script>
  
 	</body>
 </html>
