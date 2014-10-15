@@ -77,6 +77,9 @@ define('WPLANG', '');
  * Change this to true to enable the display of notices during development.
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
+
+ * DAMC - note, setting these to true pushes the page content down in my themes - can't be bothered to work out why, but worth knowing..
+
  */
 define('WP_DEBUG', true);
 define('WP_DEBUG_LOG', true);
