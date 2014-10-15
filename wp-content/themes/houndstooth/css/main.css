@@ -346,6 +346,8 @@ img.aligncenter {
 /* Override bootstrap */
 .page-header {
   border-bottom: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Override .. */
