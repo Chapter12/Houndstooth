@@ -296,6 +296,7 @@ function ht_gallery_shortcode( $attr ) {
 		$image_meta  = wp_get_attachment_metadata( $id );
   */  
     $image_src = image_with_rollover( $id );
+    $image_link = wp_get_attachment_url( $id );
     $parent_id = $attachment->post_parent;
     $author = get_the_title( $parent_id );
     $link = get_the_permalink( $parent_id );
@@ -304,7 +305,9 @@ function ht_gallery_shortcode( $attr ) {
     $output .= "  <div class='col-md-4'>\n";
     $output .= "    <div class='htcell'>\n";
     $output .= "      <div class='htimgcell'>\n";
+    $output .= "        <a class='htgallery' href='" . $image_link . "' rel='lightbox[bisc]'>\n";
     $output .= $image_src;
+    $output .= "        </a>\n";
     $output .= "      </div>\n";
     $output .= "      <div class='text-right'>\n";
     $output .= $credit;
@@ -318,6 +321,7 @@ function ht_gallery_shortcode( $attr ) {
     }
 	}
   $output .= "</div> <!-- row -->\n";
+  $output .= "<script> jQuery('a.htgallery').colorbox(); </script>\n";
 
   // Open the row and cell again for the main content 
   $output .= "<div class='row'>\n";
