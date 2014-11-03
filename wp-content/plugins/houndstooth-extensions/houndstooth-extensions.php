@@ -274,12 +274,10 @@ function ht_gallery_shortcode( $attr ) {
     $output .= "  <div class='col-md-4'>\n";
     $output .= "    <div class='htcell'>\n";
     $output .= "      <div class='htimgcell'>\n";
-    $output .= "        <a class='htgallery' href='" . $image_link . "' rel='lightbox[bisc]'>\n";
+    $output .= "        <a style='display:none' id='" . $id . "_link' href='" . $link . ".'>" . $author . "</a>";
+    $output .= "        <a class='htgallery' id='" . $id . "' href='" . $image_link . "' rel='lightbox[bisc]' >\n";
     $output .= $image_src;
     $output .= "        </a>\n";
-    $output .= "      </div>\n";
-    $output .= "      <div class='text-right'>\n";
-    $output .= $credit;
     $output .= "      </div>\n";
     $output .= "    </div> <!-- htcell -->\n";
     $output .= "  </div> <!-- col-md-4 -->\n";
@@ -290,7 +288,14 @@ function ht_gallery_shortcode( $attr ) {
     }
 	}
   $output .= "</div> <!-- row -->\n";
-  $output .= "<script> jQuery('a.htgallery').colorbox(); </script>\n";
+  $output .= "<script> 
+                var \$j = jQuery.noConflict();
+                \$j('a.htgallery').colorbox({ title: function() {
+                var id = \$j(this).attr('id');
+                var title = \$j(this).siblings('#'+id+'_link').html();
+                var url = \$j(this).siblings('#'+id+'_link').attr('href');
+                return '<a href=\"' + url + '\">' + title + '</a>';
+              }}); </script>\n";
 
   // Open the row and cell again for the main content 
   $output .= "<div class='row'>\n";
