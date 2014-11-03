@@ -31,8 +31,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
       </div>
       <div class='col-md-4'>
         <div class='htcell'>
-          <?php echo page_teaser(HOUNDSTOOTH_PAGE_ID) ?><br />
-            <a href="<?php echo get_category_link(SUBMISSIONS_CATEGORY_ID) ?>">Browse</a><br />
+          <?php echo page_teaser(HOUNDSTOOTH_PAGE_ID) ?> | 
+            <a href="<?php echo get_category_link(SUBMISSIONS_CATEGORY_ID) ?>">Browse</a> | 
             <a href="<?php echo get_page_link(UPLOAD_PAGE_ID) ?>">Upload</a>
         </div>
       </div>
@@ -52,7 +52,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
       </div>
       <div class='col-md-4'>
         <div class='htcell htcellshort'>
-          <?php echo page_teaser(RESEARCH_STUDIO_PAGE_ID) ?><br />
+          <?php echo page_teaser(RESEARCH_STUDIO_PAGE_ID) ?> | Link 2 | Link 3 
     <!-- 
             <a href="<?php echo get_page_link(PROFILES_PAGE_ID) ?>">Profiles</a><br />
             <a href="<?php echo get_page_link(PROJECTS_PAGE_ID) ?>">Projects</a>
