@@ -34,6 +34,11 @@
 
         ?> 
       </div>
+<!--
+      <div class='col-md-4'>
+        <?php wp_list_categories( $args ); ?>
+      </div>
+-->
     </div>
 		<div class="clearfix"></div>
 		<?php 
