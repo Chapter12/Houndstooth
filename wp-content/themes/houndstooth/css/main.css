@@ -53,7 +53,7 @@
 
 /* DAMC - put this min height in to keep footer lower. Might have side-effects?... */
 .site-main {
-  min-height: 600px;
+ /* min-height: 600px; */
 }
 
 .site-main .format-aside {

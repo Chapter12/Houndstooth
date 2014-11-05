@@ -288,6 +288,7 @@ function ht_gallery_shortcode( $attr ) {
     }
 	}
   $output .= "</div> <!-- row -->\n";
+  $output .= "<div class='clearfix'></div>\n";
   $output .= "<script> 
                 var \$j = jQuery.noConflict();
                 \$j('a.htgallery').colorbox({ title: function() {
