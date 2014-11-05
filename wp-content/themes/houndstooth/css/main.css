@@ -484,7 +484,8 @@ img.aligncenter {
 }
 
 .news_categories {
-  border: 1px solid #cccccc;
+/*  border: 1px solid #cccccc; */
+/*  border-left: 1px solid black; */
   width: 180px;
   padding: 15px;
   position: relative;
