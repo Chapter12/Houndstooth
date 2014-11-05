@@ -482,3 +482,23 @@ img.aligncenter {
   font-weight:bold; 
   color:#7C7C7C;
 }
+
+.news_categories {
+  border: 1px solid #cccccc;
+  width: 180px;
+  padding: 15px;
+  position: relative;
+  top: -110px;
+  float: right;
+}
+.news_categories ul {
+  padding: 0;
+}
+.news_categories li {
+  list-style: none;
+  padding: 0;
+}
+.news_categories_title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}

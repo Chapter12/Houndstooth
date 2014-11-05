@@ -40,7 +40,12 @@
                  */ ?>
           <?php if ($wp_query->current_post < 1 && !is_single() ) { ?>
             <div class='col-md-4'>
-              <?php wp_list_categories( array('child_of'=>NEWS_CATEGORY_ID, 'show_count'=>1) ); ?>
+              <div class='news_categories'>
+                <div class='news_categories_title'>Categories</div>
+                <ul>
+                <?php wp_list_categories( array('child_of'=>NEWS_CATEGORY_ID, 'show_count'=>1, 'title_li'=>'') ); ?>
+                </ul>
+              </div>
             </div>
           <?php } ?>
         </div>
