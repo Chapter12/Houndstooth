@@ -38,7 +38,9 @@
                    the category list in there, but this leads to trouble with the gallery & thumbs
                    hacks (i.e. where we want insert full width content into a 2/3 width content area)
                  */ ?>
-          <?php if ($wp_query->current_post < 1 && !is_single() ) { ?>
+          <?php 
+            if ($wp_query->current_post < 1 && !is_single() && category_id_is_in_categories(NEWS_CATEGORY_ID, get_the_category()) ) { 
+          ?>
             <div class='col-md-4'>
               <div class='news_categories'>
                 <div class='news_categories_title'>Categories</div>

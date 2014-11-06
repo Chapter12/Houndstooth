@@ -145,6 +145,15 @@ if ( is_user_logged_in() ) {
 return $html;
 }
 
+
+function category_id_is_in_categories($id, $categories) {
+  $category_ids = array();
+  foreach($categories as $category) {
+    array_push($category_ids, $category->cat_ID);
+  }
+  return in_array($id, $category_ids);
+}
+
 /**
  * Setup theme and register support wp features.
  */
