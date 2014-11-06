@@ -68,15 +68,9 @@ get_header();
                 ?> 
               </h2>
               
-              <?php
-              // Show an optional term description.
-              $term_description = term_description();
-              if (!empty($term_description)) {
-                printf('<div class="taxonomy-description">%s</div>', $term_description);
-              } //endif;
-              ?>
             </header><!-- .page-header -->
-            
+           
+            <div class='row'> 
             <?php 
             $count = 0;
             /* Start the Loop */
