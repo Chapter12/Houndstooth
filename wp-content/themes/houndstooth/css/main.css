@@ -329,6 +329,13 @@ img.aligncenter {
   max-height: 420px;
 }
 
+.htimgcell img:hover,
+.htimgcell_large img:hover {
+  filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */ 
+}
+
 .htimgcell {
 /*  border: 1px solid black; */
   width: 300px;

@@ -24,8 +24,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           <a href='<?php echo get_permalink(HOUNDSTOOTH_PAGE_ID); ?>'>
             <?php 
               $image_id = get_post_thumbnail_id( HOUNDSTOOTH_PAGE_ID );
-              echo image_with_rollover( $image_id, 'large' ); 
             ?>
+            <img src="<?php echo get_image_src( $image_id, 'large' ); ?>" />
           </a>
         </div>
       </div>
@@ -45,8 +45,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           <a href='<?php echo get_permalink(RESEARCH_STUDIO_PAGE_ID); ?>'>
             <?php
               $image_id = get_post_thumbnail_id( RESEARCH_STUDIO_PAGE_ID );
-              echo image_with_rollover( $image_id, 'large' ); 
             ?>
+            <img src="<?php echo get_image_src( $image_id ); ?>" />
           </a>
         </div>
       </div>
@@ -85,8 +85,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                   <a href='<?php the_permalink(); ?>'>
                     <?php
                       $image_id = get_post_thumbnail_id( );
-                      echo image_with_rollover( $image_id ); 
                     ?>
+                    <img src="<?php echo get_image_src( $image_id ); ?>" />
                   </a>
                 </div>
               </div>

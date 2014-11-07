@@ -62,6 +62,11 @@ function page_teaser($page_id) {
   . "'>About</a>";
 }
 
+function get_image_src($image_id, $size='small') {
+  $image_array = wp_get_attachment_image_src( $image_id, $size );
+  return $image_array[0];
+}
+
 function image_with_rollover( $image_id, $size='small' ) {
   if ($size == 'small') {
     $dimensions = array(300,200);
@@ -71,8 +76,7 @@ function image_with_rollover( $image_id, $size='small' ) {
     $js_function_suffix = "_large";
   }
 
-  $image_array = wp_get_attachment_image_src( $image_id, $size );
-  $src = $image_array[0];
+  $src = get_image_src($image_id, $size);
   if ($src) {
     $html = "<img src='" . $src . "'"
     . " onmouseover='image_mouseover" . $js_function_suffix . "(this)' onmouseout='image_mouseout(this,\"" . $src . "\")' />";
@@ -111,8 +115,8 @@ function ht_thumbs_func( $atts ) {
                     <a href='<?php the_permalink(); ?>'>
                       <?php
                         $image_id = get_post_thumbnail_id( );
-                        echo image_with_rollover( $image_id ); 
                       ?>
+                      <img src="<?php echo get_image_src( $image_id ); ?>" />
                     </a>
                   </div>
                 </div>
