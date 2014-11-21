@@ -15,7 +15,7 @@
 			<footer id="site-footer" role="contentinfo">
 				<div id="footer-row" class="row site-footer">
 					<div class="col-md-4">
-            <a href="http://twitter.com">The Houndstooth Project on Twitter</a><br />
+            <a href="http://twitter.com/HoundstoothP">The Houndstooth Project on Twitter</a><br />
             <?php echo login_out_link( wppb_curpageurl() ) ?> 
           </div>
 
