@@ -264,7 +264,7 @@ function ht_gallery_shortcode( $attr ) {
 		}
 		$image_meta  = wp_get_attachment_metadata( $id );
   */  
-    $image_src = image_with_rollover( $id );
+    $image_src = get_image_src( $id );
     $image_link = wp_get_attachment_url( $id );
     $parent_id = $attachment->post_parent;
     $author = get_the_title( $parent_id );
@@ -276,7 +276,7 @@ function ht_gallery_shortcode( $attr ) {
     $output .= "      <div class='htimgcell'>\n";
     $output .= "        <a style='display:none' id='" . $id . "_link' href='" . $link . ".'>" . $author . "</a>";
     $output .= "        <a class='htgallery' id='" . $id . "' href='" . $image_link . "' rel='lightbox[bisc]' >\n";
-    $output .= $image_src;
+    $output .= "          <img src='" . $image_src . "' />";
     $output .= "        </a>\n";
     $output .= "      </div>\n";
     $output .= "    </div> <!-- htcell -->\n";
