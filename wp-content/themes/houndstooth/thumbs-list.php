@@ -80,11 +80,19 @@ get_header();
               ?> 
                 <div class='col-md-4'>
                   <div class='htcell'>
-                    <div class='htimgcell'>
-                      <a href='<?php the_permalink(); ?>'><?php echo get_the_post_thumbnail(null,array(300,200)); ?></a>
+                    <div class='news_title'>
+                      <a href='<?php the_permalink(); ?>'><?php echo get_the_title(); ?></a>
                     </div>
-                    <div class='text-right'><a href='<?php the_permalink(); ?>'><?php the_author(); ?></div>
+                    <div class='htimgcell'>
+                      <a href='<?php the_permalink(); ?>'>
+                        <?php
+                          $image_id = get_post_thumbnail_id( );
+                        ?>
+                        <img src="<?php echo get_image_src( $image_id ); ?>" />
+                      </a>
+                    </div>
                   </div>
+
                 </div>
           
               <?php
