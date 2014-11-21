@@ -488,6 +488,11 @@ img.aligncenter {
 #cboxTitle a:hover {
   font-weight:bold; 
   color:#7C7C7C;
+  float: right;
+}
+
+#cboxCurrent {
+  left: 0 !important;
 }
 
 .news_categories {
