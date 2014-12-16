@@ -69,7 +69,16 @@ get_header();
               </h2>
               
             </header><!-- .page-header -->
-           
+
+            <?php
+              // TODO: caption, and link back to main submissions page? 
+            if (category_id_is_in_categories(SUBMISSIONS_CATEGORY_ID, get_the_category()) ) { 
+            ?>
+
+              <div class='tag_list'>
+                <span class='tags_title'>Tags: </span><?php wp_tag_cloud( array('smallest' => 11, 'largest' => 11, 'unit' => 'pt', 'separator' => ' | ')  ); ?>
+              </div>
+            <?php } ?>          
             <div class='row'> 
             <?php 
             $count = 0;

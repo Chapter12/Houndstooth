@@ -515,3 +515,18 @@ img.aligncenter {
   font-weight: bold;
   margin-bottom: 5px;
 }
+
+.tag_list {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.tags_title {
+  font-weight: bold;
+}
+
+.tag_list a,
+.tag_list a:focus,
+.tag_list a:hover {
+  text-decoration: none;
+}
