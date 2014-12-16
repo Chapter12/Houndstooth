@@ -76,7 +76,8 @@ get_header();
             ?>
 
               <div class='tag_list'>
-                <span class='tags_title'>Tags: </span><?php wp_tag_cloud( array('smallest' => 11, 'largest' => 11, 'unit' => 'pt', 'separator' => ' | ')  ); ?>
+                <span class='tags_title'>Tags: </span><?php wp_tag_cloud( array('smallest' => 11, 'largest' => 11, 'unit' => 'pt', 'separator' => ' | ')  ); ?> 
+                  | <a href="<?php echo get_category_link(SUBMISSIONS_CATEGORY_ID) ?>"> View All</a>
               </div>
             <?php } ?>          
             <div class='row'> 
