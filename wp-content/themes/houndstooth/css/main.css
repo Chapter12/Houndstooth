@@ -526,7 +526,10 @@ img.aligncenter {
 }
 
 .tag_list a,
-.tag_list a:focus,
-.tag_list a:hover {
+.tag_list a:focus {
   text-decoration: none;
+}
+
+.tag_list a:hover {
+  text-decoration: underline;
 }
