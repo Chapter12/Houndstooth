@@ -77,7 +77,7 @@ function ht_user_submitted_posts() {
   } else {
     // Far from ideal to have to hard-code this URL..
     return "<p>You must be registered with the Houndstooth site and logged in to submit your work.</p>
-            <p><a href='/houndstooth/login/'>Click here to login</a></p>
+            <p><a href='/houndstooth/pb-login/'>Click here to login</a></p>
             <p><a href='/houndstooth/register/Or click here to register.</a></p>";
   }
 }
@@ -101,7 +101,7 @@ function ht_wpuf_addpost() {
               <p><a href='/wordpress/?page_id=36'>Or click here to register.</a></p>";
     } else {
       return "<p>You must be registered with the Houndstooth site and logged in to submit your work.</p>
-              <p><a href='/houndstooth/login/'>Click here to login</a></p>
+              <p><a href='/houndstooth/pb-login/'>Click here to login</a></p>
               <p><a href='/houndstooth/register/'>Or click here to register.</a></p>";
     }
 
