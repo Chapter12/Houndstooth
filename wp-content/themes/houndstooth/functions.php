@@ -42,7 +42,7 @@ define('LOGIN_PAGE_ID', 154);
 define('UPLOAD_PAGE_ID', 132);
 define('SUBMISSION_COMPLETE_PAGE_ID', 336);
 define('LOST_PASSWORD_PAGE_ID', 345);
-define('UPLOAD_PAGE_ID', 9999);
+//define('UPLOAD_PAGE_ID', 9999);
 define('LOGIN_PAGE_ID', 154);
 
 }
