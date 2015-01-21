@@ -29,7 +29,7 @@ function ht_wppb_register_redirect_after_creation($message, $link) {
 
 // This is a custom hook added into the plugin itself! front-end/wppb.login.php:81
 function ht_wppb_after_login_redirect($old_link) {
-  $link = get_permalink(UPLOAD_PAGE_ID);
+  $link = get_permalink(UPLOAD_FORM_ID);
   return $link;
 }
 
