@@ -27,9 +27,9 @@ function ht_wppb_register_redirect_after_creation($message, $link) {
   return ""; // Actually don't need to say anything else here; just need to stop it redirecting..
 }
 
-// This is a custom hook added into the plugin itself! front-end/wppb.register.php:81
+// This is a custom hook added into the plugin itself! front-end/wppb.login.php:81
 function ht_wppb_after_login_redirect($old_link) {
-  $link = get_permalink(SUBMIT_PAGE_ID);
+  $link = get_permalink(UPLOAD_PAGE_ID);
   return $link;
 }
 
