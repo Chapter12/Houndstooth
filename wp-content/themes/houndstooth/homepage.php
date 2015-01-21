@@ -33,7 +33,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
         <div class='htcell'>
           <?php echo page_teaser(HOUNDSTOOTH_PAGE_ID) ?> | 
             <a href="<?php echo get_category_link(SUBMISSIONS_CATEGORY_ID) ?>">Browse</a> | 
-            <a href="<?php echo get_page_link(UPLOAD_PAGE_ID) ?>">Upload</a>
+            <a href="<?php echo get_page_link(UPLOAD_PAGE_ID) ?>">Upload</a> |
+            <a href="<?php echo get_category_link(COLLECTIONS_CATEGORY_ID) ?>">Browse Collections</a>
         </div>
       </div>
     </div>
