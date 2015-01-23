@@ -533,3 +533,7 @@ img.aligncenter {
 .tag_list a:hover {
   text-decoration: underline;
 }
+
+.justify {
+  text-align: justify;
+}
