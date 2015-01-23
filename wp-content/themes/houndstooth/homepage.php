@@ -34,7 +34,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           <?php echo page_teaser(HOUNDSTOOTH_PAGE_ID) ?> | 
             <a href="<?php echo get_category_link(SUBMISSIONS_CATEGORY_ID) ?>">Browse</a> | 
             <a href="<?php echo get_page_link(UPLOAD_PAGE_ID) ?>">Upload</a> |
-            <a href="<?php echo get_category_link(COLLECTIONS_CATEGORY_ID) ?>">Browse Collections</a>
+            <a href="<?php echo get_category_link(COLLECTIONS_CATEGORY_ID) ?>">Collections</a>
         </div>
       </div>
     </div>
