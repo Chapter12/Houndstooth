@@ -27,7 +27,7 @@ define('PROJECTS_PAGE_ID', 309);
 define('NEWS_CATEGORY_ID',16);
 define('SUBMISSIONS_CATEGORY_ID',17);
 define('COLLECTIONS_CATEGORY_ID',30);
-define('COLLABORATIONS_CATEGORY_ID', 29);
+define('COMMISSIONS_CATEGORY_ID', 59);
 
 
 // Override for live site - this doesn't work?
