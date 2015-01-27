@@ -21,15 +21,16 @@ define('COLLECTIONS_PAGE',"/wordpress/collections");
 define('HOUNDSTOOTH_PAGE_ID', 203);
 define('RESEARCH_STUDIO_PAGE_ID', 178);
 define('SUBMISSIONS_PAGE_ID', 225);
-define('PROFILES_PAGE_ID', 307);
+define('PROFILES_PAGE_ID', 406);
 define('PROJECTS_PAGE_ID', 309);
 
 define('NEWS_CATEGORY_ID',16);
 define('SUBMISSIONS_CATEGORY_ID',17);
 define('COLLECTIONS_CATEGORY_ID',30);
+define('COLLABORATIONS_CATEGORY_ID', 29);
 
 
-// Override for live site - this doesn't work.
+// Override for live site - this doesn't work?
 $site_url = get_site_url();
 if ( false == strstr( $site_url, 'localhost' ) ) {
 
