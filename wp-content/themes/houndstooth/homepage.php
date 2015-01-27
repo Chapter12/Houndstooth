@@ -54,7 +54,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
       <div class='col-md-4'>
         <div class='htcell htcellshort '>
           <?php echo page_teaser(RESEARCH_STUDIO_PAGE_ID) ?> | 
-            <a href="<?php echo get_category_link(COMMISSIONS_CATEGORY_ID) ?>">Commissions &amp; Collaborations</a> | 
+            <a href="<?php echo get_category_link(COMMISSIONS_CATEGORY_ID) ?>">Commissions</a> | 
             <a href="<?php echo get_page_link(PROFILES_PAGE_ID) ?>">Profiles</a>
         </div>
       </div>
