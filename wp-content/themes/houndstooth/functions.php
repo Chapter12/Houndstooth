@@ -26,7 +26,6 @@ define('PROJECTS_PAGE_ID', 309);
 
 define('NEWS_CATEGORY_ID',16);
 define('SUBMISSIONS_CATEGORY_ID',17);
-define('COLLECTIONS_CATEGORY_ID',30);
 define('COMMISSIONS_CATEGORY_ID', 59);
 
 
@@ -39,6 +38,7 @@ define('LOST_PASSWORD_PAGE_ID', 319);
 define('UPLOAD_PAGE_ID', 356);
 define('UPLOAD_FORM_ID', 132);
 define('LOGIN_PAGE_ID', 154);
+define('COLLECTIONS_CATEGORY_ID',30);
 
 
 } else {
@@ -47,6 +47,7 @@ define('SUBMISSION_COMPLETE_PAGE_ID', 336);
 define('LOST_PASSWORD_PAGE_ID', 345);
 //define('UPLOAD_PAGE_ID', 9999);
 define('LOGIN_PAGE_ID', 154);
+define('COLLECTIONS_CATEGORY_ID',45);
 
 }
  

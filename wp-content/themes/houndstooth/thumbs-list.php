@@ -70,6 +70,8 @@ get_header();
               
             </header><!-- .page-header -->
 
+            <div class='row'>
+              <div class='col-md-8'>
             <?php
               // TODO: caption, and link back to main submissions page? 
             if (category_id_is_in_categories(SUBMISSIONS_CATEGORY_ID, get_the_category()) ) { 
@@ -79,7 +81,17 @@ get_header();
                 <span class='tags_title'>Tags: </span><?php wp_tag_cloud( array('smallest' => 11, 'largest' => 11, 'unit' => 'pt', 'separator' => ' | ')  ); ?> 
                   | <a href="<?php echo get_category_link(SUBMISSIONS_CATEGORY_ID) ?>"> View All</a>
               </div>
-            <?php } ?>          
+            <?php } ?>       
+              </div>
+              <div class='col-md-4 right_align'>
+                <?php if (category_id_is_in_categories(COLLECTIONS_CATEGORY_ID, get_the_category()) ) { ?>
+                  <a href="<?php echo get_category_link(SUBMISSIONS_CATEGORY_ID) ?>">Uploads</a>
+                <?php } elseif (category_id_is_in_categories(SUBMISSIONS_CATEGORY_ID, get_the_category()) ) { ?>
+                  <a href="<?php echo get_category_link(COLLECTIONS_CATEGORY_ID) ?>">Collections</a>
+               <?php } ?>
+              </div>
+            </div>
+   
             <div class='row'> 
             <?php 
             $count = 0;
